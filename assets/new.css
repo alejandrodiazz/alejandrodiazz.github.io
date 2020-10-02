@@ -357,7 +357,7 @@ h6, .h6 {
 
 .portfolio-single .portfolio-title {
     letter-spacing: 0.012em;
-    margin-bottom: 1.9rem;
+    margin-bottom: 1rem;
 }
 
 .portfolio-single .portfolio-details {
@@ -407,11 +407,11 @@ h6, .h6 {
 }
 
 .portfolio-single.portfolio-single-half .portfolio-info {
-    max-width: 540px;
-    padding-top: 92px;
-    padding-bottom: 92px;
-    padding-left: 90px;
-    padding-right: 60px;
+    /*max-width: 540px;*/
+    padding-top: 5px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .portfolio-images img {
