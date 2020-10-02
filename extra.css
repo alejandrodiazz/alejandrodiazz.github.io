@@ -101,3 +101,9 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.image-txt-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
