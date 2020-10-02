@@ -1,0 +1,103 @@
+/*useful for colors, https://htmlcolorcodes.com/ */
+
+
+#title {
+  text-align: center;
+  color: white;
+  font-family: verdana;
+  font-size: 4em;
+}
+
+body {
+	/*background-color: mediumseagreen;*/
+	background-color: black;
+	color: #ECF0F1;
+	font-size: 100%;
+  font-family: serif;
+}
+
+#bu {
+  text-decoration: none;
+  color: white;
+}
+
+.button {
+  background-color: #101010; 
+  border: none;
+  color: white;
+  padding: .2em 2em;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  font-size: 1.7em;
+  border-radius: 5%;
+  font-family: verdana;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+#portrait {
+	width: 30%;
+	height: auto;
+  float: right;
+  vertical-align: middle;
+	/*-webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    image-orientation: 90deg;*/
+
+	
+}
+
+.fa {
+  padding: 1.5em;
+  font-size: 2em;
+  width: 1em;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  border-radius: 50%;
+  color: white;
+  background-color: #154360;
+}
+
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
