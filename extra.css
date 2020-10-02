@@ -37,11 +37,13 @@ body {
   background-color: #7ebf8e;
   border: none;
   color: #000;
+  display: inline-block;
   text-align: center;
-  float: center;
-  font-size: 28px;
-  padding: 2px;
+  font-size: 1.7em;
+  padding: .2em 2em;
   width: 44vw;
+  cursor: pointer;
+  display: inline-block;
   transition: all 0.5s;
   cursor: pointer;
   margin: 4px;
@@ -89,13 +91,10 @@ body {
 }
 
 .fa {
-  padding: 2em;
-  font-size: 4em;
-  width: 2em;
-  text-align: center;
-  position: relative;
-  text-decoration: none;
-  border-radius: 80%;
+  padding: .5em;
+  width: 1.8em; /*This should be about 3x the padding*/
+  font-size: 10px;
+  border-radius: 20%;
   color: white;
   background-color: #7ebf8e;
   margin:5px;
