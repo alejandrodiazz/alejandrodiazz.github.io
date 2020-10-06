@@ -84,7 +84,9 @@ body {
   cursor: pointer;
   transition: all 0.5s;
   position: relative;
-  margin: 4px;
+  margin: 6px;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
 }
 
 .buttonspan span {
