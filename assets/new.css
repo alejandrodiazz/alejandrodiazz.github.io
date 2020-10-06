@@ -32,9 +32,9 @@ a:hover {
 
 /*Typography*/
 
-html {
+/*html {
     font-size: 15px;
-}
+}*/
 
 body {
     font-family: "Work Sans", sans-serif;
@@ -93,9 +93,8 @@ h6, .h6 {
 }
 
 .display-4 {
-    font-size: 2.6rem;
+    font-size: 3rem;
 }
-
 .h2, h2 {
     font-size: 2.1rem;
 }
@@ -128,37 +127,6 @@ h6, .h6 {
     position: relative;
 }
 
-/* Navbar */
-.navbar {
-    position: relative;
-    padding: 60px 0;
-    font-size: 0.96rem;
-    z-index: 1000;
-    transition: .3s background-color;
-    will-change: background-color;
-}
-
-.navbar .nav-table {
-    display: table;
-    width: 100%;
-    height: 100%;
-}
-
-.navbar .nav-table > * {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.navbar a {
-    color: inherit;
-    transition: .3s color;
-}
-
-.navbar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
 
 /*Footer*/
 
