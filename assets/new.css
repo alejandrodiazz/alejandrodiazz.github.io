@@ -44,10 +44,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-p {
-    margin-bottom: 1.6rem;
-}
-
 b, strong {
     font-weight: bold;
 }
@@ -355,11 +351,21 @@ h6, .h6 {
 }
 
 .portfolio-single .portfolio-text + .portfolio-details {
-    margin-top: 46px;
+    margin-top: 10px;
 }
 
 .portfolio-single .portfolio-text p:last-of-type {
     margin-bottom: 0;
+}
+
+.portfolio-images p:first-of-type {
+    padding-top: 70px;
+}
+.portfolio-images p{
+    padding-top: 4vh;
+    text-align: center; 
+    line-height: 20px;
+    margin: 25px;
 }
 
 .container-fluid .portfolio-single.portfolio-single-half .portfolio-images {
@@ -376,8 +382,27 @@ h6, .h6 {
 }
 
 .portfolio-images img {
-    width: 100%;
+    width: 60%;
     height: auto;
+    text-align: center; 
+    left: 20%;
+    position: relative;
+}
+
+.youtubevideo{
+  position: relative;
+  width: 84%;
+  height: 0;
+  padding-bottom: 56.25%; /* The height of the item will now be 56.25% of the width. */
+}
+
+/* Adjust the iframe so it's rendered in the outer-width and outer-height of it's parent */
+.youtubevideo iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 8%;
+  top: 0;
 }
 
 .sketchfab-embed-wrapper {
