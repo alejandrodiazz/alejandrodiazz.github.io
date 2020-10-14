@@ -79,18 +79,22 @@
     // -->
     </script>
 
-
   </head>
 
 
-  <body onload="updateClock(); setInterval('updateClock()', 1000 ); climate(); setInterval('climate()', 1000 );">
+  <!-- <body onload="updateClock(); setInterval('updateClock()', 1000 ); climate(); setInterval('climate()', 1000 );"> -->
+  <body>
     <div class = "container">
-      <h1 class="centered" id = "title">Alejandro Diaz</h1>
+      <h1 id = "title">Alejandro Diaz</h1>
     </div>
-    <div style="text-align:right ">
+    <!-- <div style="text-align:right ">
       <span id="climate">Climate Rocks!</span><br>
       <span id="debug">debug</span><br>
       <span id="clock">clock</span>
+    </div> -->
+    <script src="https://climateclock.world/widget-v2.js" async></script> 
+    <div style="padding: 2px;">
+      <climate-clock />
     </div>
 
 
