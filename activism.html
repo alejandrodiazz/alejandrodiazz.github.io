@@ -17,37 +17,35 @@
 
     <script type="text/javascript">
     <!--
-    import os
-    import sys
-    import time
-    from datetime import datetime, timezone
-
-
-
-
-    relpath = lambda filename: os.path.join(sys.path[0], filename)
-    hex2color = lambda x: graphics.Color(int(x[-6:-4], 16), int(x[-4:-2], 16), int(x[-2:], 16))
-
-
-    def time_and_budget():
-        '''
-        Return the time (in seconds) until the carbon budget is spent, and the
-        remaining carbon budget (in tons).
-        '''
-        var SECONDS_PER_YEAR = 365.25 * 24 * 3600
-        var START_DATE = datetime(2018, 1, 1, 0, 0, 0, tzinfo=timezone.utc)
-        var START_EMISSIONS_BUDGET = 4.2e11
-        var START_EMISSIONS_YEARLY = 4.2e10
-        var currentHours = currentTime.getHours ( );
-        var currentMinutes = currentTime.getMinutes ( );
-        var currentSeconds = currentTime.getSeconds ( );
-        var emissions_per_second = START_EMISSIONS_YEARLY / SECON
-        DS_PER_YEAR
-        var emissions_budget_spent = ((now - START_DATE).total_seconds() * emissions_per_second)
-        var emissions_budget = START_EMISSIONS_BUDGET - emissions_budget_spent
-        var time_remaining = emissions_budget / emissions_per_second
+    function climate ( ) {
+        // Return the time (in seconds) until the carbon budget is spent, and the
+        // remaining carbon budget (in tons).
+        var specifiedTime = new Date("01/01/2018");
+        var currentTime = new Date();
+        var SECONDS_PER_YEAR = 365.25 * 24 * 3600;
+        var START_EMISSIONS_BUDGET = 4.2*10**11;
+        var START_EMISSIONS_YEARLY = 4.2*10**10;
+        var currentHours = currentTime.getHours();
+        var currentMinutes = currentTime.getMinutes();
+        var currentSeconds = currentTime.getSeconds();
+        var emissions_per_second = START_EMISSIONS_YEARLY / SECONDS_PER_YEAR;
+        var timeDiff = Math.abs(currentTime.getTime() - specifiedTime.getTime()); // in miliseconds
+        var timeDiffInSecond = Math.ceil(timeDiff / 1000); // in second
+        var emissions_budget_spent = (timeDiffInSecond) * emissions_per_second;
+        var emissions_budget = Math.round(START_EMISSIONS_BUDGET - emissions_budget_spent);
+        var time_remaining = (START_EMISSIONS_BUDGET - emissions_budget_spent) / emissions_per_second;
         
-        return time_remaining, emissions_budget
+        var years = Math.floor(time_remaining/ (24*60*60 *365.20));
+        var days = Math.floor((time_remaining- (years * 24 * 60 *60 *365))/ (24*60*60));
+        var hours = Math.floor((time_remaining- (years * 24 * 60 *60 *365) - (days * 24 * 60 *60) ) / (60*60))
+        var minutes = Math.floor((time_remaining- (years * 24 * 60 *60 *365) - (days * 24 * 60 *60) - (hours *60*60) )/60)
+        var seconds = Math.floor((time_remaining- (years * 24 * 60 *60 *365) - (days * 24 * 60 *60) - (hours *60*60) - minutes *60))
+        var currentClimateString = "DEADLINE We must achieve zero emissions in " +  years + "yrs " + days + "days " + hours + ":" + minutes + ":" + seconds; 
+        var e = "Emissions budget: " + emissions_budget;
+
+        document.getElementById("climate").firstChild.nodeValue = currentClimateString;
+        document.getElementById("debug").firstChild.nodeValue = e;
+    }
 
     function updateClock ( )
     {
@@ -85,30 +83,25 @@
   </head>
 
 
-  <body onload="updateClock(); setInterval('updateClock()', 1000 )">
+  <body onload="updateClock(); setInterval('updateClock()', 1000 ); climate(); setInterval('climate()', 1000 );">
     <div class = "container">
       <h1 class="centered" id = "title">Alejandro Diaz</h1>
     </div>
     <div style="text-align:right ">
-      <span id="clock">9:24:38 PM</span>
+      <span id="climate">Climate Rocks!</span><br>
+      <span id="debug">debug</span><br>
+      <span id="clock">clock</span>
     </div>
 
 
     <div class = "center">
       <table>
         <tr>
-          <th>
-            <a href="./index.html" id = "bu" class = "navbar"><span>Home</span></a>
-          </th>
-          <th>
-            <a href="./projects.html" id = "bu" class = "navbar"><span>Projects</span></a>
-          </th>
-          <th>
-            <a href="./adventures.html" id = "bu" class = "navbar"><span>Adventures</span></a>
-          </th>
-          <th>
-            <a href="./activism.html" id = "bu" class = "navbar"><span>Activism</span></a>
-          </th>
+          <th><a href="./index.html" id = "bu" class = "navbar"><span>About</span></a></th>
+          <th><a href="./resume.html" id = "bu" class = "navbar"><span>Resume</span></a></th>
+          <th><a href="./projects.html" id = "bu" class = "navbar"><span>Projects</span></a></th>
+          <th><a href="./adventures.html" id = "bu" class = "navbar"><span>Adventures</span></a></th>
+          <th><a href="./activism.html" id = "bu" class = "navbar"><span>Activism</span></a></th>
         </tr>
       </table>
     </div>
