@@ -14,13 +14,85 @@
     <script src="assets/jquery.min.js"></script>
     <!-- logo -->
     <link rel="icon" href="images/headshot.jpg" type="image/icon type">
+
+    <script type="text/javascript">
+    <!--
+    import os
+    import sys
+    import time
+    from datetime import datetime, timezone
+
+
+
+
+    relpath = lambda filename: os.path.join(sys.path[0], filename)
+    hex2color = lambda x: graphics.Color(int(x[-6:-4], 16), int(x[-4:-2], 16), int(x[-2:], 16))
+
+
+    def time_and_budget():
+        '''
+        Return the time (in seconds) until the carbon budget is spent, and the
+        remaining carbon budget (in tons).
+        '''
+        var SECONDS_PER_YEAR = 365.25 * 24 * 3600
+        var START_DATE = datetime(2018, 1, 1, 0, 0, 0, tzinfo=timezone.utc)
+        var START_EMISSIONS_BUDGET = 4.2e11
+        var START_EMISSIONS_YEARLY = 4.2e10
+        var currentHours = currentTime.getHours ( );
+        var currentMinutes = currentTime.getMinutes ( );
+        var currentSeconds = currentTime.getSeconds ( );
+        var emissions_per_second = START_EMISSIONS_YEARLY / SECON
+        DS_PER_YEAR
+        var emissions_budget_spent = ((now - START_DATE).total_seconds() * emissions_per_second)
+        var emissions_budget = START_EMISSIONS_BUDGET - emissions_budget_spent
+        var time_remaining = emissions_budget / emissions_per_second
+        
+        return time_remaining, emissions_budget
+
+    function updateClock ( )
+    {
+      var currentTime = new Date ( );
+
+      var currentHours = currentTime.getHours ( );
+      var currentMinutes = currentTime.getMinutes ( );
+      var currentSeconds = currentTime.getSeconds ( );
+
+      // Pad the minutes and seconds with leading zeros, if required
+      currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
+      currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
+
+      // Choose either "AM" or "PM" as appropriate
+      var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
+
+      // Convert the hours component to 12-hour format if needed
+      currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
+
+      // Convert an hours component of "0" to "12"
+      currentHours = ( currentHours == 0 ) ? 12 : currentHours;
+
+      // Compose the string for display
+      var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
+
+      // Update the time display
+      document.getElementById("clock").firstChild.nodeValue = currentTimeString;
+    }
+
+
+    // -->
+    </script>
+
+
   </head>
 
 
-  <body>
+  <body onload="updateClock(); setInterval('updateClock()', 1000 )">
     <div class = "container">
       <h1 class="centered" id = "title">Alejandro Diaz</h1>
     </div>
+    <div style="text-align:right ">
+      <span id="clock">9:24:38 PM</span>
+    </div>
+
 
     <div class = "center">
       <table>
