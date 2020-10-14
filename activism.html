@@ -41,10 +41,10 @@
         var minutes = Math.floor((time_remaining- (years * 24 * 60 *60 *365) - (days * 24 * 60 *60) - (hours *60*60) )/60)
         var seconds = Math.floor((time_remaining- (years * 24 * 60 *60 *365) - (days * 24 * 60 *60) - (hours *60*60) - minutes *60))
         var currentClimateString = "DEADLINE We must achieve zero emissions in " +  years + "yrs " + days + "days " + hours + ":" + minutes + ":" + seconds; 
-        var e = "Emissions budget: " + emissions_budget;
+        var e = "Emissions budget: " + emissions_budget + " tons";
 
         document.getElementById("climate").firstChild.nodeValue = currentClimateString;
-        document.getElementById("debug").firstChild.nodeValue = e;
+        document.getElementById("emissions").firstChild.nodeValue = e;
     }
 
     function updateClock ( )
@@ -89,7 +89,7 @@
     </div>
     <!-- <div style="text-align:right ">
       <span id="climate">Climate Rocks!</span><br>
-      <span id="debug">debug</span><br>
+      <span id="emissions">emissions</span><br>
       <span id="clock">clock</span>
     </div> -->
     <script src="https://climateclock.world/widget-v2.js" async></script> 
