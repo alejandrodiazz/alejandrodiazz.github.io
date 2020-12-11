@@ -39,11 +39,11 @@ body {
   color: #000;
   text-align: center;
   font-size: 2.5vw;
-  width: 18vw;
+  width: 18.5vw;
   cursor: pointer;
   transition: all 0.5s;
   cursor: pointer;
-  margin: 4px;
+  margin: 2.5px;
 }
 
 .navbar span {
@@ -109,6 +109,49 @@ body {
 }
 
 .buttonspan:hover span:after{
+  opacity: 1;
+  right: 0;
+}
+
+
+.buttonspan2 {
+  border-radius: 4px;
+  background-color: #3ebf8e;
+  border: none;
+  color: #000;
+  text-align: left;
+  font-size: 2vw;
+  display: inline-block;
+  width: 42vw;
+  cursor: pointer;
+  transition: all 0.5s;
+  position: relative;
+  margin: 6px;
+  padding-top: .5vh;
+  padding-bottom: .5vh;
+}
+
+.buttonspan2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.buttonspan2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.buttonspan2:hover  span{
+  padding-right: 25px;
+}
+
+.buttonspan2:hover span:after{
   opacity: 1;
   right: 0;
 }
