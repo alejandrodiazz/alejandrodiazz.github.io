@@ -80,34 +80,19 @@
                             <p>One of the initial schematics using the car relay to switch the fan and water pump on/off</p> 
                             <img src="images/evaporativecooler/fanrelaycircuit.jpg" alt=""><br><br>
                             <img src="images/evaporativecooler/description.jpg" alt=""><br><br>
-                            <p>We were using this relay with this schematic</p> 
+                            <p>We were using this relay with this schematic, but then replaced it with it with a simpler relay to avoid the extra circuitry.</p> 
                             <img src="images/evaporativecooler/relay.jpg" alt=""><br><br>
-                            <p>We are using the <a target="_blank" href="https://www.amazon.com/Diymore-AT24C32-Arduino-Without-Battery/dp/B01IXXACD0/ref=sr_1_4?dchild=1&keywords=DS3231+Precision+RTC&qid=1585234599&s=electronics&sr=1-4">DS3231 RTC CLock</a> to maintain an accurate Time Stamp.</p>
+                            <p>We use the <a target="_blank" href="https://www.amazon.com/Diymore-AT24C32-Arduino-Without-Battery/dp/B01IXXACD0/ref=sr_1_4?dchild=1&keywords=DS3231+Precision+RTC&qid=1585234599&s=electronics&sr=1-4">DS3231 RTC CLock</a> to maintain an accurate Time Stamp.</p>
                             <p><a target="_blank" href="http://misclab.umeoce.maine.edu/boss/Arduino/bensguides/DS3231_Arduino_Clock_Instructions.pdf">Here is some example code</a> to program/interface with the real time clock. Ignore the 32K and SQW lines, connect SDA and SCL lines to the Arduino, VCC to 5V and GND to GND.</p>
                             <p>We are using the <a target="_blank" href="https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280-DS002.pdf">BME280 Temperature/Humidity/Pressure Sensor</a> We communicate with this sensor using I2C Protocol</p>
-                            <p>Here is an overview of some of the electronics that are contained within the evaporative cooler.</p>
+                            <p>Here is an picture overview of some of the electronics that are contained within the evaporative cooler.</p>
                             <img src="images/evaporativecooler/IMG_6047.JPG" alt=""><br><br>
-                            <p>Went in to lab to try to work on the sd transfer process! Still some bugs, not sure why the SD transfer works seamlessly on my end, but doesn't at all with the lab setup. </p>
+                            <p>Another picture showing the container and the the watertight seals for the outgooing and incoming cable connnections.</p>
                             <img src="images/evaporativecooler/IMG_6169.JPG" alt=""><br><br>
                             <p>We went ahead and did a quantitative calibration for the water pump to see what voltages we needed to apply to get the output of water we desired. </p>
-                            <p>At 20% and 40% power the water was not even able to go up the 82 inches to exit the tube.</p>
+                            <p>At 20% and 40% voltage the water was not even able to go up the 82 inches to exit the tube.</p>
                             <img src="images/evaporativecooler/pumptest.jpg" alt=""><br><br>
-
-
-                            <?php
-                            print"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
-                                <html xmlns="http://www.w3.org/1999/xhtml" xml:lang=\"en\" lang=\"en\">
-                                    <head>
-                                    </head>
-                                    <body>&";
-
-                                        if ($_SERVER['REQUEST_METHOD'] == "GET) {
-                                           $storeVal1 = $_GET["a1"];
-                                        //Now you have the values of val1, val2, val3 stored in storeVal1, storeVal2, storeVal3 respectively.
-                                        }
-                                    print "</body>;
-                            ?>
-
+                            <p>More recently we have been working to get the data uploaded to a raspberrypi for easy remote access to the data.</p>
 
                             
                         </div>
