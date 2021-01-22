@@ -103,8 +103,19 @@ h6, .h6 {
     font-size: 1.4rem;
 }
 
-/*Bootstrap*/
 
+li:before {
+  content: '— ';
+  margin-left: -20px;
+}
+
+li {
+  margin-left: 20px;
+  list-style: none;
+}
+
+
+/*Bootstrap*/
 .nk-sidebar-sticky-parent {
     display: -ms-flexbox;
     display: flex;
