@@ -681,5 +681,37 @@ li {
 }
 
 
+/* If you want the content centered horizontally and vertically */
+.centered2 {
+  
+  margin-top: 4vw
+}
+
+/* Style the image inside the centered container, if needed */
+.centered2 img {
+  width: 20vw;
+  border-radius: 40%;
+  transform: translate(30%, 0%);
+}
+
+
+
+.main-content{
+    width: 35%;
+    padding-left: 2vw;
+    float: left;
+}
+
+.colored{
+  background-color:  #7ebf8e;
+}
+
+.aside{
+    margin-top: 4vw;
+    width: 65%;
+    padding-left: 2vw;
+    float: left;    
+}
+
 
 
