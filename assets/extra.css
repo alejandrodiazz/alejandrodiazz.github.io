@@ -683,7 +683,6 @@ li {
 
 /* If you want the content centered horizontally and vertically */
 .centered2 {
-  
   margin-top: 4vw
 }
 
@@ -704,6 +703,37 @@ li {
 
 .colored{
   background-color:  #7ebf8e;
+}
+
+.colored1{
+  background-color:  #49AED2;
+  padding-top:  5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+
+.colored2{
+  background-color:  #EC5C9D;
+  padding-top:  5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+
+.colored3{
+  background-color:  #EE436D;
+  padding-top:  5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+.colored4{
+  background-color:  #EE7F43;
+  padding-top:  5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
 }
 
 .aside{
