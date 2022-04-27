@@ -13,11 +13,9 @@
 }
 
 body {
-	/*background-color: mediumseagreen;*/
-	background-color: white;
-	color: #000308;
-	/*font-size: 100%;*/
-  font-family: serif;
+	/*background-color: mediumseagreen;*/  
+    background-color: white;
+    font-family: serif;
 }
 
 #bu {
@@ -201,6 +199,37 @@ body {
 
 
 
+#button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: underline;
+    cursor: auto;
+    background-color: #3ebf8e;
+    color: #0d319a;
+
+    border-radius: 4px;
+    padding: .25vh;
+}
+
+
+#link{
+  color: (internal value);
+  text-decoration: underline;
+  cursor: auto;
+  color: #0d319a;
+}
+
+a:link, a:visited {
+  color: (internal value);
+  text-decoration: underline;
+  cursor: auto;
+}
+
+a:link:active, a:visited:active {
+  color: (internal value);
+}
 
 
 
@@ -221,14 +250,6 @@ html {
     z-index: 1;
 }
 
-a {
-    color: #1140c9;
-}
-
-a:focus,
-a:hover {
-    color: #0d319a;
-}
 
 .gap {
     display: block;
@@ -575,7 +596,7 @@ li {
     padding-left: 4%;
     padding-top: 1vh;
     text-align: left; 
-    line-height: 20px;
+    line-height: 25px;
     margin: 15px;
 }
 .portfolio-images h3{
