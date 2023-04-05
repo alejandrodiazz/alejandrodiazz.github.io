@@ -811,6 +811,39 @@ li {
   line-height: .1px;
 }
 
+
+#wrapwriting {
+  width: 100%;
+  height: 400px;
+  padding: 0;
+  overflow: hidden;
+  border-color: black;
+  border-width: 2.5px;
+  border-style: solid;
+  display: block;
+  line-height: .1px;
+}
+
+#scaled-framewriting {
+  zoom: 1;
+  -moz-transform: scale(.5);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(.5);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(.5);
+  -webkit-transform-origin: 0 0;
+}
+
+#scaled-framewriting {
+  width: 1000%;
+  height: 200%;
+  border: 0px;
+  position: relative;
+  right: 40px;
+  top: -20px;
+  
+}
+
 #scaled-frame {
   width: 1000%;
   height: 100%;
