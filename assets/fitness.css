@@ -47,7 +47,7 @@ ul {
 h3 {
   color: var(--yellow);
   margin: 10px 0;
-  text-transform: lowercase;
+/*  text-transform: lowercase;*/
   font-size: 1.25em;
 }
 
@@ -131,7 +131,7 @@ h3 {
   margin-top: 10px;
   margin-bottom: 0;
   font-size: 1.75em;
-  text-transform: lowercase;
+/*  text-transform: lowercase;*/
   color: var(--name);
 }
 
